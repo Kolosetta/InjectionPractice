@@ -1,6 +1,8 @@
-package com.example.dependencyinjectionstart.example1
+package com.example.injectionpractice.example1
 
-class ComputerTower(
+import javax.inject.Inject
+
+class ComputerTower @Inject constructor(
     val storage: Storage,
     val memory: Memory,
     val processor: Processor

@@ -1,4 +1,6 @@
-package com.example.dependencyinjectionstart.example1
+package com.example.injectionpractice.example1
 
-class Storage {
+import javax.inject.Inject
+
+class Storage @Inject constructor() {
 }

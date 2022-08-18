@@ -1,7 +1,5 @@
 package com.example.injectionpractice.example1
 
-import com.example.dependencyinjectionstart.example1.*
-
 class Component {
 
     //Класс для инъекции в поля класса
