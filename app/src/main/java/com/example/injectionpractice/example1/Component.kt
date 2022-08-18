@@ -1,7 +1,6 @@
-package com.example.dependencyinjectionstart.example1
+package com.example.injectionpractice.example1
 
-import com.example.injectionpractice.example1.Activity
-import com.example.injectionpractice.example1.Mouse
+import com.example.dependencyinjectionstart.example1.*
 
 class Component {
 
@@ -22,6 +21,6 @@ class Component {
 
     //Второй способ: доставка зависимостей снаружи
     fun inject(activity: Activity){
-        activity.computer = getComputer()
+        //activity.keyboard = Keyboard()
     }
 }

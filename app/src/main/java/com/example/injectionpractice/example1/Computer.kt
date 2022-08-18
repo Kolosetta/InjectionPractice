@@ -1,6 +1,7 @@
-package com.example.dependencyinjectionstart.example1
+package com.example.injectionpractice.example1
 
-import com.example.injectionpractice.example1.Mouse
+import com.example.dependencyinjectionstart.example1.ComputerTower
+import com.example.dependencyinjectionstart.example1.Monitor
 
 class Computer(
     val monitor: Monitor,
