@@ -6,11 +6,12 @@ import com.example.injectionpractice.R
 import com.example.injectionpractice.example1.Activity
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var viewModel: ExampleViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val activity = Activity()
-        //activity.keyboard.toString()
-        activity.computer.toString()
+        viewModel.method()
     }
 }
