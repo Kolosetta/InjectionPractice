@@ -1,6 +1,6 @@
 package com.example.injectionpractice.example2.domain
 
-interface ExampleRepository {
+interface Repository {
 
     fun method()
 }

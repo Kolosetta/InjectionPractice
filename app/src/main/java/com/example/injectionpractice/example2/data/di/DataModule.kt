@@ -1,23 +1,20 @@
 package com.example.injectionpractice.example2.data.di
 
-import com.example.injectionpractice.example2.data.datasource.ExampleLocalDataSource
-import com.example.injectionpractice.example2.data.datasource.ExampleLocalDataSourceImpl
-import com.example.injectionpractice.example2.data.datasource.ExampleRemoteDataSource
-import com.example.injectionpractice.example2.data.datasource.ExampleRemoteDataSourceImpl
+import com.example.injectionpractice.example2.data.datasource.LocalDataSource
+import com.example.injectionpractice.example2.data.datasource.LocalDataSourceImpl
+import com.example.injectionpractice.example2.data.datasource.RemoteDataSource
+import com.example.injectionpractice.example2.data.datasource.RemoteDataSourceImpl
+import dagger.Binds
 import dagger.Module
 import dagger.Provides
 
 @Module
-class DataModule {
+abstract class DataModule {
 
-    @Provides
-    fun provideLocalDataSource(impl: ExampleLocalDataSourceImpl) : ExampleLocalDataSource{
-        return impl
-    }
+    @Binds
+    abstract fun bindLocalDataSource(impl: LocalDataSourceImpl) : LocalDataSource
 
-    @Provides
-    fun provideRemoteDataSource(impl: ExampleRemoteDataSourceImpl) : ExampleRemoteDataSource {
-        return impl
-    }
+    @Binds
+    abstract fun bindRemoteDataSource(impl: RemoteDataSourceImpl) : RemoteDataSource
 
 }

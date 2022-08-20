@@ -1,6 +1,6 @@
 package com.example.injectionpractice.example2.data.datasource
 
-interface ExampleRemoteDataSource {
+interface LocalDataSource {
 
     fun method()
 }

@@ -2,8 +2,9 @@ package com.example.injectionpractice.example2.domain
 
 import javax.inject.Inject
 
-class ExampleUseCase @Inject constructor (
-    private val repository: ExampleRepository) {
+class UseCase @Inject constructor (
+    private val repository: Repository
+    ) {
 
     operator fun invoke() {
         repository.method()
