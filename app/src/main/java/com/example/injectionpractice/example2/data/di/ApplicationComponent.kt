@@ -4,7 +4,9 @@ import android.content.Context
 import com.example.injectionpractice.example2.presentation.MainActivity
 import dagger.BindsInstance
 import dagger.Component
+import javax.inject.Singleton
 
+@Singleton
 @Component(modules = [DataModule::class, DomainModule::class])
 interface ApplicationComponent {
 
@@ -21,12 +23,12 @@ interface ApplicationComponent {
 
     //Альтернативный способ добавление объектов в граф зависимостей
     //Можно написать кастомный билдер, как выше, или же фабрику, как здесь
-    @Component.Factory
+    /*@Component.Factory
     interface ApplicationComponentFactory{
 
         fun create(
             @BindsInstance context: Context
         ): ApplicationComponent
-    }
+    }*/
 
 }
