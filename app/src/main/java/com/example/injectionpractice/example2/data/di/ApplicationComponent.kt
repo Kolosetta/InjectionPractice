@@ -19,4 +19,14 @@ interface ApplicationComponent {
         fun build(): ApplicationComponent
     }
 
+    //Альтернативный способ добавление объектов в граф зависимостей
+    //Можно написать кастомный билдер, как выше, или же фабрику, как здесь
+    @Component.Factory
+    interface ApplicationComponentFactory{
+
+        fun create(
+            @BindsInstance context: Context
+        ): ApplicationComponent
+    }
+
 }

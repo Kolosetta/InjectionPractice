@@ -14,6 +14,8 @@ class MainActivity : AppCompatActivity() {
         DaggerApplicationComponent.builder()
             .context(application)
             .build()
+
+
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
