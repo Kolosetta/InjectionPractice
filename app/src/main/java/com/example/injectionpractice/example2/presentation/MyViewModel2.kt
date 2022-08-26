@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import com.example.injectionpractice.example2.domain.UseCase
 import javax.inject.Inject
 
-class MyViewModel @Inject constructor(
+class MyViewModel2 @Inject constructor(
     private val useCase: UseCase
 ) : ViewModel() {
     fun method() {
