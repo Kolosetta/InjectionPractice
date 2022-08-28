@@ -9,6 +9,9 @@ import dagger.Component
 @Component(modules = [DataModule::class, DomainModule::class, ViewModelModule::class])
 interface ApplicationComponent {
 
+    fun activityComponentFactory(): ActivityComponent.Factory
+
+
     fun inject(activity: MainActivity)
 
     @Component.Builder
