@@ -6,31 +6,28 @@ import dagger.BindsInstance
 import dagger.Component
 
 @ApplicationScope
-@Component(modules = [DataModule::class, DomainModule::class, ViewModelModule::class])
+@Component(modules = [DataModule::class, DomainModule::class])
 interface ApplicationComponent {
 
     fun activityComponentFactory(): ActivityComponent.Factory
 
-
-    fun inject(activity: MainActivity)
-
-    @Component.Builder
+    /*@Component.Builder
     interface ApplicationComponentBuilder{
 
         @BindsInstance
         fun context(context: Context): ApplicationComponentBuilder
 
         fun build(): ApplicationComponent
-    }
+    }*/
 
     //Альтернативный способ добавление объектов в граф зависимостей
     //Можно написать кастомный билдер, как выше, или же фабрику, как здесь
-    /*@Component.Factory
+    @Component.Factory
     interface ApplicationComponentFactory{
 
         fun create(
             @BindsInstance context: Context
         ): ApplicationComponent
-    }*/
+    }
 
 }

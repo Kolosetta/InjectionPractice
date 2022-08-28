@@ -5,8 +5,7 @@ import com.example.injectionpractice.example2.data.di.DaggerApplicationComponent
 
 class ExmplApplication : Application() {
     val component by lazy {
-        DaggerApplicationComponent.builder()
-            .context(this)
-            .build()
+        DaggerApplicationComponent.factory()
+            .create(this)
     }
 }
